@@ -12,15 +12,15 @@
     <body>
         <div class="container">
             <h1>{{ __('Page ranks') }}</h1>
-            <div class="row mb-3">
-                <div class="col-1 pt-1">
-                    <div class="label-for-search">{{ __('Search') }}:</div>
-                </div>
-                <div class="col-11">
-                    <input type="text" class="form-control" v-model="search_text" v-on:keyup="performSearch">
-                </div>
-            </div>
             <div id="app">
+                <div class="row mb-3">
+                    <div class="col-1 pt-1">
+                        <div class="label-for-search">{{ __('Search') }}:</div>
+                    </div>
+                    <div class="col-11">
+                        <input type="text" class="form-control" v-model="search_text" v-on:keyup="performSearch">
+                    </div>
+                </div>
                 <div class="table-responsive" v-if="domains.length>0">
                     <table class="table table-bordered table-with-bordered-cells">
                         <thead>

@@ -17,7 +17,7 @@ class PageRankController extends Controller
         $pageRankQuery = PageRank::query()->orderBy('root_domain', 'asc');
 
         if ($request->search_text && strlen($request->search_text) > 2) {
-            $pageRankQuery->where('root_domain', 'like', '%' . $request->search . '$');
+            $pageRankQuery->where('root_domain', 'like', '%' . $request->search_text . '%');
         }
 
         return $pageRankQuery->paginate(100);
