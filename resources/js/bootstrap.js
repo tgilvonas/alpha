@@ -9,4 +9,13 @@ window.axios = axios;
 
 window.axios.defaults.headers.common['X-Requested-With'] = 'XMLHttpRequest';
 
+import { createApp } from 'vue'
+window.createVueApp = createApp;
 
+window.eventEmitter = require('tiny-emitter/instance');
+
+import paginator from "./vue-components/Paginator";
+
+window.vueComponents = {
+    paginator: paginator
+};
